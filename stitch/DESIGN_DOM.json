@@ -1,0 +1,149 @@
+{
+  "generatedAt": "2026-11-08T22:41:55.689Z",
+  "screenCount": 1,
+  "screens": {
+    "261e3df67ca94db2b95df9a7b0afc95e": {
+      "screenId": "261e3df67ca94db2b95df9a7b0afc95e",
+      "materialSymbolsRequired": false,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "flex",
+            "items-center",
+            "justify-between",
+            "border-b",
+            "border-slate-800",
+            "pb-5"
+          ],
+          "childCount": 7
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "my-8",
+            "flex-1",
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center"
+          ],
+          "childCount": 6
+        },
+        {
+          "tag": "footer",
+          "layout": "flex-col",
+          "classes": [
+            "border-t",
+            "border-slate-800",
+            "pt-4",
+            "flex",
+            "flex-col",
+            "sm:flex-row",
+            "items-center",
+            "justify-between",
+            "text-xs",
+            "text-slate-500"
+          ],
+          "childCount": 3
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Start",
+          "classes": [
+            "px-8",
+            "py-3.5",
+            "bg-emerald-500",
+            "hover:bg-emerald-400",
+            "text-slate-950",
+            "font-bold",
+            "rounded-xl",
+            "shadow-[0_0_20px_rgba(16,185,129,0.35)]",
+            "transition",
+            "duration-150",
+            "uppercase",
+            "tracking-wider",
+            "text-sm",
+            "flex",
+            "items-center",
+            "space-x-2",
+            "cursor-pointer"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "SESSION TELEMETRY: Game started",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Route: /play | Tick: 60fps",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [],
+      "cards": [],
+      "icons": [],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {},
+      "fonts": [],
+      "layoutHints": {
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "button",
+          "label": "Start",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "SESSION TELEMETRY: Game started",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Route: /play | Tick: 60fps",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "SESSION TELEMETRY: Game started",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Route: /play | Tick: 60fps",
+          "icon": null,
+          "active": false
+        }
+      ],
+      "title": "Play Page - Canvas Start Game"
+    }
+  }
+}
