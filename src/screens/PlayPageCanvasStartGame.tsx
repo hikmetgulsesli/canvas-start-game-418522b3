@@ -14,12 +14,19 @@ export interface PlayPageCanvasStartGameProps {
   actions?: {
     "start-1"?: () => void;
   };
-
+  highScore?: number;
+  gameStatus?: string;
 }
 
 export type PlayPageCanvasStartGameActionCallbacks = NonNullable<PlayPageCanvasStartGameProps["actions"]>;
 
-export function PlayPageCanvasStartGame({ actions }: PlayPageCanvasStartGameProps) {
+export function PlayPageCanvasStartGame({
+  actions,
+  highScore = 0,
+  gameStatus = "Game started",
+}: PlayPageCanvasStartGameProps) {
+  const highScoreText = String(highScore);
+
   return (
     <>
       <div data-surface-id="SURF_PLAY_PAGE" className="flex-1 flex flex-col justify-between p-6 max-w-7xl mx-auto w-full" data-setfarm-element-ref="E000001" data-observable-refs="OBS_START_GAME_PLAY_ROUTE_STABILITY">
@@ -36,8 +43,8 @@ export function PlayPageCanvasStartGame({ actions }: PlayPageCanvasStartGameProp
                 <div className="text-xs text-slate-500 font-mono tracking-wider">RECORD VAULT</div>
                 <div className="flex items-baseline space-x-2">
                   <span className="text-xs text-slate-400">High Score:</span>
-                  <div data-surface-id="SURF_HIGH_SCORE_DISPLAY" className="inline-block" data-setfarm-element-ref="E000002" data-observable-refs="OBS_START_GAME_HIGH_SCORE_ZERO">
-                    <span className="font-mono text-xl font-bold text-emerald-400">0</span>
+                  <div data-surface-id="SURF_HIGH_SCORE_DISPLAY" className="inline-block" data-setfarm-element-ref="E000002" data-observable-refs="OBS_START_GAME_HIGH_SCORE_ZERO" data-value={highScoreText}>
+                    <span className="font-mono text-xl font-bold text-emerald-400">{highScoreText}</span>
                   </div>
                 </div>
               </div>
@@ -76,7 +83,7 @@ export function PlayPageCanvasStartGame({ actions }: PlayPageCanvasStartGameProp
             <div className="flex items-center space-x-3">
               <span className="text-slate-600">SESSION TELEMETRY:</span>
               <div data-surface-id="SURF_GAME_STATUS" className="px-3 py-1 bg-slate-900 border border-slate-800 rounded-md text-emerald-400 font-medium" data-setfarm-element-ref="E000005" data-observable-refs="OBS_START_GAME_GAME_STARTED_TEXT">
-                Game started
+                {gameStatus}
               </div>
             </div>
       
